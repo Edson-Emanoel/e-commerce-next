@@ -12,7 +12,7 @@ export default function Pagina(props: PaginaProps) {
                   <Cabecalho />
                   <main
                         className={`
-                              flex-1 w-[1200px] mx-auto bg-zinc-900
+                              flex flex-1 flex-col items-center w-[1200px] mx-auto bg-zinc-900
                               ${props.className ?? ''} py-10
                         `}
 

@@ -10,26 +10,25 @@ export interface AreaItemCarrinhoProps {
 
 export default function AreaItemCarrinho(props: AreaItemCarrinhoProps){
       return(
-            <div className="flex items-center gap-5 bg-zinc-800 rounded-md overflow-hidden w-4/5">
+            <div className="flex items-center gap-5 bg-zinc-800 w-5/6 rounded-md overflow-hidden">
                   <div className="relative w-28 h-28">
-                        <Image
-                              src={props.item.produto.imagem}
-                              alt={props.item.produto.nome}
-                              fill
-                              className="object-cover"
-                        />
+                  <Image
+                        src={props.item.produto.imagem}
+                        alt={props.item.produto.nome}
+                        fill
+                        className="object-cover"
+                  />
                   </div>
                   <div className="flex flex-col justify-center flex-1">
-                        <h2 className="text-xl font-bold">{props.item.produto.nome}</h2>
-                        <p className="text-sm text-zinc-400">{props.item.produto.descricao}</p>
-                        
+                        <span className="text-xl font-bold">{props.item.produto.nome}</span>
+                        <span className="text-sm text-zinc-400">{props.item.produto.descricao}</span>
                         <div className="flex items-center gap-2 mt-2 text-zinc-400 text-lg font-bold">
                               <span>R$ {props.item.produto.preco.toFixed(2)}</span>
                               <IconX size={20} />
                               <span>{props.item.quantidade}</span>
                               <span>=</span>
                               <span className="text-yellow-500">
-                                    R$ {(props.item.produto.preco * props.item.quantidade)}
+                                    R$ {(props.item.produto.preco * props.item.quantidade).toFixed(2)}
                               </span>
                         </div>
                   </div>
