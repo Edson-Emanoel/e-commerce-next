@@ -1,7 +1,6 @@
 import Image from "next/image";
 import Produto from "@/app/data/model/Produto";
 import useCarrinho from "@/app/data/hooks/useCarrinho";
-
 export interface CartaoProdutoProps {
       produto: Produto
 }
